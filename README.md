@@ -1,3 +1,10 @@
+# Brent Kung Adder
+## Block Diagram
+
+![bkadder](images/BKadder.png)
+
+---
+
 # Kogge_stone_adder
 
 ## Block Diagram
