@@ -1,20 +1,20 @@
 module ks_adder (
-    input                clk,
-    input                rst,
+    input           clk,
+    input           rst,
     input  [15:0]   a,
-    input  [15:0]    b,
-    input 	              cin,
+    input  [15:0]   b,
+    input 	        cin,
     output  [15:0] sum,
-    output              cout
+    output         cout
 );
 
-    wire              clk;
-    wire              rst;
+    wire          clk;
+    wire          rst;
     wire  [15:0]  a;
     wire  [15:0]  b;
-    wire              cin;
+    wire          cin;
     reg  [15:0]   sum;
-    reg                cout;
+    reg           cout;
 
     //Considering internal ks_adder PG variables
     reg [15:0] p;
@@ -32,16 +32,16 @@ module ks_adder (
     //Temporary registers used to clock the inputs and iutputs
     reg  [15:0]  a_temp;
     reg  [15:0]  b_temp;
-    reg              cin_temp;
+    reg          cin_temp;
     reg  [15:0] sum_temp;
-    reg              cout_temp;
+    reg          cout_temp;
 
     //Sequential Block to clock the inputs
     always@(posedge clk, posedge rst)
     begin
 	if(rst)
 	begin
-            a_temp <= 16'b0;
+    	a_temp <= 16'b0;
 	    b_temp <= 16'b0;
  	    cin_temp <= 1'b0;
 	end
@@ -275,4 +275,3 @@ module ks_adder (
     end
 
 endmodule
-
